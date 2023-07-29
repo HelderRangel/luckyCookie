@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+
+  font-size: 1.5rem;
+}
+
+body, h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #34355B;
+}
+
+main {
+  width: min(43rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: .5rem;
+  place-content: center;
+  text-align: center;
+
+  background-color: white;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+h1, h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+p, button{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.screen2 p {
+  font-family: 'Dancing Script', cursive;
+  background: #E4EDF1;
+  padding: 1rem;
+  
+  color: black;
+  font-size: 1.8rem;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+}
+
+button {
+  background: #FF9500;
+  color: white;
+  font-weight: bold;
+  padding: 1.6rem;
+
+  border: none;
+  border-radius: .4rem;
+  margin-bottom: -1.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.fCookie:hover {
+  animation: shakeImage 0.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.lucky {
+  animation: surgePhrases 3s ease;
+}
+
+#openAgain:hover {
+  cursor: pointer;
+  background-color: #e98903;
+}
+/* Animação  */
+
+/* cookie animation*/
+@keyframes shakeImage {
+  0%{
+    transform: translate(1px, 1px);
+  }
+  25%{
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  50%{
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  75%{
+    transform: translate(3px, 1px) rotate(1deg);
+  }
+  100%{
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* phrase animation */
+@keyframes surgePhrases {
+  0% {
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%); 
+    opacity: 1; 
+  }
+}
+
+/* background animation */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
